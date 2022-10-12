@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-5 min-vh-100">
+    <div class="container pt-5 min-vh-100">
         <div class="px-3 py-3 pt-md-4 text-center">
             <h1 class="display-4 mb-4">Prezzi</h1>
             <h3 class="lead lh-base">
@@ -9,8 +9,8 @@
         </div>
         <div class="d-flex justify-content-center flex-wrap text-center">
             <!-- opzione 1 -->
-            <div class="card bg-light shadow m-5 bg-white rounded" style="max-width: 18rem; min-width: 18rem;">
-                <div class="card-header">
+            <div class="card bg-light shadow m-5 bg-white rounded border-0" style="max-width: 18rem; min-width: 18rem;">
+                <div class="card-header border-0">
                     <h4 class="my-0">Base</h4>
                 </div>
                 <div class="card-body bg-white">
@@ -26,8 +26,8 @@
                 </div>
             </div>
             <!-- opzione 2 -->
-            <div class="card bg-light shadow m-5 bg-white rounded" style="max-width: 18rem; min-width: 18rem;">
-                <div class="card-header" style="background: #FDBC44">
+            <div class="card bg-light shadow m-5 bg-white rounded border-0" style="max-width: 18rem; min-width: 18rem;">
+                <div class="card-header border-0" style="background: #FDBC44">
                     <h4 class="my-0">Avanzato</h4>
                 </div>
                 <div class="card-body bg-white">
@@ -43,8 +43,8 @@
                 </div>
             </div>
             <!-- opzione 3 -->
-            <div class="card bg-light shadow m-5 bg-white rounded" style="max-width: 18rem; min-width: 18rem;">
-                <div class="card-header" style="background: #19CBCE">
+            <div class="card bg-light shadow m-5 bg-white rounded border-0" style="max-width: 18rem; min-width: 18rem;">
+                <div class="card-header border-0" style="background: #19CBCE">
                     <h4 class="my-0">Pro</h4>
                 </div>
                 <div class="card-body bg-white">

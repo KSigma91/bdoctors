@@ -168,7 +168,7 @@
                             <div class="form-group row mb-0">
                                 <div class="d-flex justify-content-end col-md-12 mt-4">
                                     <button type="submit" value="Submit"
-                                        class="btn btn-primary bg-gradient rounded-pill text-light">
+                                        class="btn btn-primary bg-gradient rounded-pill border-0 text-light">
                                         {{ __('Completa registrazione') }}
                                     </button>
                                 </div>

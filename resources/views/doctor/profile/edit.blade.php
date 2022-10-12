@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10 col-lg-10">
-            <div class="card border-primary">
-                <div class="card-header bg-primary bg-gradient bg-opacity-50 border-bottom border-primary"><big>{{ __('Modifica Profilo') }}</big></div>
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-primary bg-gradient bg-opacity-50 border-0"><big>{{ __('Modifica Profilo') }}</big></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -202,7 +202,7 @@
                             @endforeach
                         </fieldset>
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary bg-gradient text-light rounded-pill">Salva</button>
+                            <button type="submit" class="btn btn-primary bg-gradient text-light rounded-pill border-0">Salva</button>
                         </div>
                     </form>
                 </div>

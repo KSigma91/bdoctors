@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row justify-content-center text-center vh-100">
             <div class="col-sm-12 col-md-10 col-lg-7">
-                <div class="card" style="border-color: #00334e">
-                    <div class="card-header border-bottom bg-gradient text-light" style="background: #00334e; border-color: #00334e">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header border-0 bg-gradient text-light" style="background: #00334e">
                         <big>{{ __('Dashboard') }}</big>
                     </div>
 

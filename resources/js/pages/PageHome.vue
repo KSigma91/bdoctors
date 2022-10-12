@@ -4,10 +4,10 @@
         <div class="container-jumbo">
             <img src="img/jumbotron-2.jpg" alt="jumbotron" class="img-fluid" id="jumbotron">
 
-            <div class="cont-jumbo col-12 col-md-6 ps-4 ps-sm-5 ps-md-5 ps-lg-5">
-                <h2 class="title-jumbo">
+            <div class="cont-jumbo col-12 col-md-6 ps-1 ps-sm-2 ps-md-5 ps-lg-0">
+                <h1 class="title-jumbo mb-3">
                     Il tuo specialista a portata di click!
-                </h2>
+                </h1>
                 <!-- searchbar -->
                 <div class="cont-searchbar">
                     <form class="d-flex justify-content-center gap-1 form-inline my-2 my-lg-0 w-75" id="form">
@@ -43,7 +43,7 @@
         <div class="container">
             <div class="mt-5">
                 <div class="text-center my-3">
-                    <big class="fs-2" style="color: #00334e">
+                    <big class="display-4 fs-2" style="color: #00334e">
                         MEDICI SPONSORIZZATI
                     </big>
                 </div>
@@ -59,7 +59,7 @@
                 <img src="img/wave.svg" alt="">
             </div>
             <div class="container mt-5 text-center">
-                <big class="fs-2">
+                <big class="fs-1">
                     PERCHÉ SCEGLIERCI
                 </big>
                 <div class="col-12 d-flex align-items-center flex-wrap">
@@ -194,13 +194,12 @@ export default {
     .cont-jumbo {
         position: absolute;
         top: 45%;
-        left: 50%;
+        left: 53%;
         z-index: 500;
         transform: translate(-50%, -50%);
 
-        h2 {
-            color: $dark;
-            font-size: 40px;
+        h1 {
+            font-size: 2.7em;
         }
     }
 }

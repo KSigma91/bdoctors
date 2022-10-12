@@ -65605,7 +65605,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/cirox/Programmazione/Boolean/Esercizi/bdoctors/resources/js/payment.js */"./resources/js/payment.js");
+module.exports = __webpack_require__(/*! C:\Users\Administrator\Documents\VSC\MyBDoctors\bdoctors\resources\js\payment.js */"./resources/js/payment.js");
 
 
 /***/ })

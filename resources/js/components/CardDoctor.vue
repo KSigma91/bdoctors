@@ -1,5 +1,5 @@
 <template>
-    <div class="my-card">
+    <!-- <div class="my-card">
         <div class="my-image-content">
             <span class="my-overlay"></span>
             <div class="my-card-image">
@@ -32,6 +32,48 @@
                 </router-link>
             </div>
         </div>
+    </div> -->
+    <div class="card border-0 shadow mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="card-header d-flex justify-content-between text-light">
+                <div class="my-card-name">
+                    <big>Dr.</big>
+                    <big class="card-title"> {{ doctor.name }} </big>
+                    <big class="card-title"> {{ doctor.lastname }} </big>
+                </div>
+                <div>
+                    <i class="fas fa-map-marker-alt align-text-top me-1"></i>
+                    <big>{{ doctor.city }}</big>
+                </div>
+            </div>
+            <div class="col-md-4 flex-start p-4">
+                <div class="my-card-image">
+                    <img class="my-card-img" :src="doctor.photo" :alt="doctor.name">
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="card-text">
+                        <div class="mb-2">
+                            <font-awesome-icon v-for="(myStar, i) in Math.floor(doctor.vote)" :key="i" icon="fa-solid fa-star" />
+                            <font-awesome-icon v-for="(myEmptyStar, j) in (5 - Math.floor(doctor.vote))" :key="j + doctor.vote" icon="fa-regular fa-star" />
+                            <small class="fst-italic ms-1">Valutazione del medico</small>
+                            <hr>
+                        </div>
+                        <div>
+                            <big class="card-title">Su di me</big>
+                            <p class="my-text-cv" style="font-size: .9em">{{ doctor.cv }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center justify-content-lg-start p-3 ms-lg-2">
+                <router-link :to="{name: 'profile', params: {id: doctor.id.toString()} }" class="my-btn btn btn-primary bg-gradient rounded-pill border-0 px-4 shadow-sm">Visualizza
+                </router-link>
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -46,7 +88,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../sass/bdoctor-palette.scss";
-
 *::-webkit-scrollbar {
     width: 5px;
 }
@@ -59,16 +100,6 @@ export default {
     background-color: $bluedark;
     border-radius: 20px;
     border: 1px solid $bluedark;
-}
-
-.my-btn{
-    background-color: $bluedark;
-    border: 1px solid $bluedark;
-
-    &:hover{
-        background-color: $ultradark;
-        border: 1px solid $ultradark;
-    }
 }
 
 .my-card {
@@ -85,23 +116,8 @@ export default {
     align-items: center;
 }
 
-.my-card-content {
-    text-align: center;
-
-    .my-card-name {
-        width: 87%;
-    }
-
-    .my-text-cv {
-        height: 130px;
-        overflow-y: scroll;
-        margin: 0;
-        padding-top: 3px;
-    }
-
-    .fa-star{
-        color: rgb(239, 203, 0);
-    }
+.card-header {
+    background-color: $blue;
 }
 
 .my-image-content {
@@ -137,12 +153,9 @@ export default {
 }
 
 .my-card-image {
-    position: relative;
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    background: #FFF;
-    padding: 3px;
 }
 
 .my-card-image .my-card-img {
@@ -150,5 +163,33 @@ export default {
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.card-text {
+
+    .fa-star{
+        color: rgb(239, 203, 0);
+    }
+
+    small {
+        color: $ultradark;
+    }
+
+    .my-text-cv {
+        height: 130px;
+        overflow-y: scroll;
+        margin: 0;
+        padding-top: 3px;
+    }
+}
+
+.my-btn{
+    background-color: $bluedark;
+    border: 1px solid $bluedark;
+
+    &:hover{
+        background-color: $ultradark;
+        border: 1px solid $ultradark;
+    }
 }
 </style>

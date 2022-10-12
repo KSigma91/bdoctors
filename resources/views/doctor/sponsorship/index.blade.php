@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center flex-wrap">
         <div class="col-sm-11 col-md-10 col-lg-10">
-            <div class="card p-3">
+            <div class="card p-3 border-0 shadow-sm">
                 <h2 class="p-3 m-auto">Sponsorizzazioni</h2>
                 <div class="card-body text-center p-4">
                     @if (session('status'))
@@ -18,17 +18,17 @@
                         <!-- abbonamenti -->
                         <div class="d-flex justify-content-center flex-wrap text-center">
                             @foreach ($sponsorships as $sponsorship)
-                                <div class="card bg-light shadow m-5 bg-white rounded" style="max-width: 18rem; min-width: 18rem;">
+                                <div class="card bg-light border-0 shadow m-5 bg-white rounded" style="max-width: 18rem; min-width: 18rem;">
                                     @if ($sponsorship->id == 1)
                                         <div class="card-header">
                                             <h4 class="my-0">Base</h4>
                                         </div>
                                     @elseif ($sponsorship->id == 2)
-                                        <div class="card-header" style="background: #FDBC44">
+                                        <div class="card-header border-0" style="background: #FDBC44">
                                             <h4 class="my-0">Avanzato</h4>
                                         </div>
                                     @else
-                                        <div class="card-header" style="background: #19CBCE">
+                                        <div class="card-header border-0" style="background: #19CBCE">
                                             <h4 class="my-0">Pro</h4>
                                         </div>
                                     @endif

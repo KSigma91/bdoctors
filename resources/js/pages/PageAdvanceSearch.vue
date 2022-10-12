@@ -3,19 +3,20 @@
         <div class="container my-5">
             <div class="d-flex flex-column justify-content-center">
                 <div class="col-12 mb-4">
-                    <div class="card w-100 m-auto" style="border-color: #007fbd">
-                        <div class="card-header bg-gradient text-light" style="background: #007fbd; border-color: #007fbd">
+                    <div class="card w-100 m-auto border-0 mb-3 shadow" style="border-color: #007fbd">
+                        <div class="card-header bg-gradient border-0 text-light" style="background: #007fbd; border-color: #007fbd">
                             <h5 class="m-auto">Filtra per:</h5>
                         </div>
                         <!-- searchbar -->
                         <ul class="list-group list-group-flush">
                             <!-- Specialization -->
-                            <li class="list-group-item" style="border-color: #007fbd"><strong>Specializzazioni:</strong><br>
+                            <li class="list-group-item">
+                                <strong>Specializzazioni:</strong><br>
                                 <form class="d-flex form-inline py-2 my-lg-0">
-                                    <input v-model="specializationSelect.name" class="form-control mr-sm-2 w-50 me-2" type="search_spec"
+                                    <input v-model="specializationSelect.name" class="form-control mr-sm-2 w-50 me-2 rounded-pill" type="search_spec"
                                         placeholder="Scrivi qui.." aria-label="Search_spec" @input="searchInput"
                                         @click="displayComponent" @keyup="displayComponent">
-                                    <button class="filter-btn btn btn-outline-primary my-2 m my-sm-0 rounded-3" type="button" @click="searchDoctor(1)">Filtra</button>
+                                    <button class="filter-btn btn btn-outline-primary my-2 m my-sm-0 rounded-pill" type="button" @click="searchDoctor(1)">Filtra</button>
                                 </form>
 
                                 <div class="collapse position-absolute d-flex my-collapse" v-if="display"
@@ -29,12 +30,12 @@
                                 </div>
                             </li>
                             <!-- City -->
-                            <li class="list-group-item" style="border-color: #007fbd"><strong>Città:</strong><br>
+                            <li class="list-group-item"><strong>Città:</strong><br>
                                 <form class="d-flex form-inline py-2 my-lg-0">
                                     <input v-model="city" @keyup.enter="searchDoctor" @input="searchInputCity"
-                                        class="form-control mr-sm-2 rounded-3 w-50 me-2" type="search_city"
+                                        class="form-control mr-sm-2 rounded-pill w-50 me-2" type="search_city"
                                         placeholder="Scrivi qui.." aria-label="Search_city" @click="displayComponentCity" @keyup="displayComponentCity">
-                                    <button class="filter-btn btn btn-outline-primary my-2 m my-sm-0 rounded-3"
+                                    <button class="filter-btn btn btn-outline-primary bg-gradient my-2 my-sm-0 rounded-pill"
                                         type="button" @click="searchDoctor(1)">Filtra</button>
                                 </form>
 
@@ -49,24 +50,24 @@
                             </div>
                             </li>
                             <!-- Vote -->
-                            <li class="list-group-item" style="border-color: #007fbd">
+                            <li class="list-group-item">
                                 <strong>Media Voto:</strong>
                                 <span v-for="item in 5" :key="item" class="mx-1">
                                     <input class="form-check-input" type="radio" name="vote" id="flexRadioDefault1"
                                         :checked="vote === item" @click="changeVote(item)">
                                     <label class="form-check-label" for="vote">
-                                        {{item}}
+                                        {{ item }}
                                     </label>
                                 </span>
                             </li>
                             <!-- Review -->
-                            <li class="list-group-item" style="border-color: #007fbd">
+                            <li class="list-group-item">
                                 <strong>Numero Recensioni:</strong>
                                 <span v-for="item in 4" :key="item" class="mx-1">
                                     <input class="form-check-input" type="radio" name="review" id="flexRadioDefault1"
                                         :checked="review === item" @click="changeReview(item)">
                                     <label class="form-check-label" for="review">
-                                        {{item}}
+                                        {{ item }}
                                     </label>
                                 </span>
                             </li>
@@ -92,9 +93,10 @@
                                 <span aria-hidden=" true">&laquo;</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link input-nav" href="#" @click="searchDoctor(currentPage)">{{
-                                currentPage
-                        }}</a>
+                        <li class="page-item">
+                            <a class="page-link input-nav" href="#" @click="searchDoctor(currentPage)">
+                                {{ currentPage }}
+                            </a>
                         </li>
                         <li class=" page-item">
                             <a class="page-link input-nav" href="#" aria-label="Next" @click="searchDoctor(++currentPage)">

@@ -17,7 +17,7 @@
                 </div>
                 <div class="m-3">
                     <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="Card image cap">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/D4E03AQH7dgDe8jWYfw/profile-displayphoto-shrink_200_200/0/1664296959019?e=1671062400&v=beta&t=rDLvsMGjwAadzehlTQQjoC-k96Oxq3y8LqCvvAgC-i8" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Andrea Guidotti</h5>
                         <p class="card-text">Jr. Full Stack Web Developer</p>

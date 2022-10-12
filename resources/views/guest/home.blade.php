@@ -100,6 +100,7 @@
                 </li>
             </ul>
         </div>
+
         {{-- pulsanti navbar desktop --}}
         <div class="d-none d-md-block d-lg-block">
             @if (Route::has('login'))
