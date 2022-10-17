@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card border-primary">
-                <div class="card-header bg-primary bg-gradient bg-opacity-50 border-primary"><big>{{ __('Inserisci i tuoi dati') }}</big></div>
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-primary bg-gradient bg-opacity-50 border-0 display-4 fs-6"><big>{{ __('Inserisci i tuoi dati') }}</big></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -67,7 +67,7 @@
                     </form>
                 </div>
             </div>
-            <div class="card bg-transparent border-primary text-center mt-2 p-3">
+            <div class="card bg-transparent border-secondary border-opacity-25 text-center mt-2 p-3">
                 <a class="nav-link" href="{{ route('register') }}">Sei un nuovo utente? <span class="fst-italic mx-1" style="color: #00acff">{{ __('Crea il tuo account') }}</span></a>
             </div>
         </div>

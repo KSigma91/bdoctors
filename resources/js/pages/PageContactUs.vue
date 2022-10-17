@@ -1,7 +1,7 @@
 <template>
     <div class="container mt-5 min-vh-100">
         <section class="mb-4">
-            <h2 class="h1-responsive font-weight-bold text-center my-4">Contattaci</h2>
+            <h2 class="h1-responsive text-center my-4 display-4 fs-2">Contattaci</h2>
             <p class="text-center w-responsive mx-auto mb-5">Hai qualche domanda? Non esitare a contattarci direttamente. Il nostro team ti ricontattera per aiutarti al meglio.</p>
 
             <div class="row">
@@ -41,12 +41,12 @@
                     </form>
 
                     <div class="text-center text-md-left mt-3">
-                        <a class="btn btn-primary bg-gradient rounded-pill">Invia</a>
+                        <a class="btn btn-primary bg-gradient rounded-pill border-0">Invia</a>
                     </div>
                 </div>
 
                 <!-- sezioe laterale -->
-                <div class="col-md-3 text-center">
+                <div class="d-flex flex-column justify-content-around col-md-3 text-center">
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
                             <p>Roma, RM 00123, IT</p>

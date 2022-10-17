@@ -33,7 +33,7 @@
             </div>
         </div>
     </div> -->
-    <div class="card border-0 shadow mb-3" style="max-width: 540px;">
+    <div class="card border-0 shadow mb-3" style="max-width: 500px;">
         <div class="row g-0">
             <div class="card-header d-flex justify-content-between text-light">
                 <div class="my-card-name">

@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-11 col-md-10 col-lg-10">
-                <div class="card border-primary">
-                    <div class="card-header bg-primary bg-gradient bg-opacity-50 border-primary">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary bg-gradient bg-opacity-50 border-0 display-4 fs-6">
                         <big>{{ __('Registrazione') }}</big>
                     </div>
 

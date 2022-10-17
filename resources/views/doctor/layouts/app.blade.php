@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm d-flex justify-content-between">
+    <div id="app" style="background: linear-gradient(340deg, #007fbd, #dbebfa)">
+        <nav class="navbar navbar-expand-md navbar-light bg-light d-flex justify-content-between shadow-sm" style="height: 86px">
             <a class="navbar-brand mx-3" href="{{ url('/') }}">
                 {{-- {{ config('app.name', 'Laravel') }} --}}
                 {{-- logo main --}}
@@ -107,51 +107,50 @@
 
         <main class="d-flex">
             <section class="left-menu d-flex justify-content-center">
-                <div class="d-flex flex-shrink-0 mt-3" >
+                <div class="d-flex flex-shrink-0 mt-3">
                     <ul class="nav nav-pills mb-auto d-flex flex-column align-content-center">
-                      <li class="side-nav-li my-1">
-                        <a href="{{ route('doctor.dashboard') }}" class="nav-link link-dark d-flex align-items-baseline" aria-current="page">
-                          <i class="fa-solid fa-house-user fs-5 my-auto"></i>
-                          <span class="d-none d-sm-block d-lg-block my-auto ms-2">Dashboard</span>
-                        </a>
-                      </li>
-                      <li class="side-nav-li my-1">
-                        <a href="{{ route('doctor.profile.edit', ['profile' => Auth::id()]) }}" class="nav-link link-dark d-flex align-items-baseline">
-                          <i class="fa-solid fa-pen fs-5 my-auto"></i>
-                          <span class="d-none d-sm-block d-lg-block my-auto ms-2 col-sm-12">Modifica Profilo</span>
-                        </a>
-                      </li>
-                      <li class="side-nav-li my-1">
-                        <a href="{{ route('doctor.profile.show', ['profile' => Auth::id()]) }}" class="nav-link link-dark d-flex align-items-baseline">
-                          <i class="fa-solid fa-eye fs-5 my-auto"></i>
-                          <span class="d-none d-sm-block d-lg-block my-auto ms-2 col-12">Visualizza Profilo</span>
-                        </a>
-                      </li>
-                      <li class="side-nav-li my-1">
-                        <a href="{{ route('doctor.messages.index') }}" class="nav-link link-dark d-flex align-items-baseline">
-                          <i class="fa-solid fa-envelope fs-5 my-auto"></i>
-                          <span class="d-none d-sm-block d-lg-block my-auto ms-2">Messaggi</span>
-                        </a>
-                      </li>
-                      <li class="side-nav-li my-1">
-                        <a href="{{ route('doctor.reviews.index') }}" class="nav-link link-dark d-flex align-items-baseline">
-                            <i class="fa-solid fa-users fs-5 my-auto"></i>
-                            <span class="d-none d-sm-block d-lg-block my-auto ms-2">Recensioni</span>
-                        </a>
-                      </li>
-                      <li class="side-nav-li my-1">
-                        <a href="{{ route('doctor.sponsorships.index') }}" class="nav-link link-dark d-flex align-items-baseline">
-                          <i class="fa-solid fa-cart-shopping fs-5 my-auto"></i>
-                          <span class="d-none d-sm-block d-lg-block my-auto ms-2">Sponsorizzazioni</span>
-                        </a>
-                      </li>
+                        <li class="side-nav-li my-1">
+                            <a href="{{ route('doctor.dashboard') }}" class="nav-link link-dark d-flex align-items-baseline" aria-current="page">
+                                <i class="fa-solid fa-house-user fs-5 my-auto"></i>
+                                <span class="d-none d-sm-block d-lg-block my-auto ms-2">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-li my-1">
+                            <a href="{{ route('doctor.profile.edit', ['profile' => Auth::id()]) }}" class="nav-link link-dark d-flex align-items-baseline">
+                                <i class="fa-solid fa-pen fs-5 my-auto"></i>
+                                <span class="d-none d-sm-block d-lg-block my-auto ms-2 col-sm-12">Modifica Profilo</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-li my-1">
+                            <a href="{{ route('doctor.profile.show', ['profile' => Auth::id()]) }}" class="nav-link link-dark d-flex align-items-baseline">
+                                <i class="fa-solid fa-eye fs-5 my-auto"></i>
+                                <span class="d-none d-sm-block d-lg-block my-auto ms-2 col-12">Visualizza Profilo</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-li my-1">
+                            <a href="{{ route('doctor.messages.index') }}" class="nav-link link-dark d-flex align-items-baseline" style="margin-left: 1px">
+                                <i class="fa-solid fa-envelope fs-5 my-auto"></i>
+                                <span class="d-none d-sm-block d-lg-block my-auto ms-2">Messaggi</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-li my-1">
+                            <a href="{{ route('doctor.reviews.index') }}" class="nav-link link-dark d-flex align-items-baseline">
+                                <i class="fa-solid fa-users fs-5 my-auto"></i>
+                                <span class="d-none d-sm-block d-lg-block my-auto ms-2">Recensioni</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-li my-1">
+                            <a href="{{ route('doctor.sponsorships.index') }}" class="nav-link link-dark d-flex align-items-baseline">
+                                <i class="fa-solid fa-cart-shopping fs-5 my-auto"></i>
+                                <span class="d-none d-sm-block d-lg-block my-auto ms-2">Sponsorizzazioni</span>
+                            </a>
+                        </li>
                     </ul>
-                  </div>
+                </div>
             </section>
             <section class="right-content my-4">
                 @yield('content')
             </section>
-
         </main>
     </div>
 </body>

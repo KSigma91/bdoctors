@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container mt-5 mb-5 min-vh-100">
-            <h3>
+            <h3 class="display-4 fs-3">
                 TEAM DI SVILUPPATORI
             </h3>
             <div class="d-flex flex-wrap justify-content-center mt-4">

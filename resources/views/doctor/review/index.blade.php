@@ -11,7 +11,7 @@
                             <img src="{{ asset('img/BDoctors_user_icon_2.svg') }}" alt="user-icon" style="max-width: 18px">
                             <span class="me-4">{{ $review->name }}</span>
                         </div>
-                        {{ __('recensione del ' . $review->date) }}
+                        <span class="fst-italic">{{ __('recensione del ' . $review->date) }}</span>
                     </div>
 
                     <div class="card-body">

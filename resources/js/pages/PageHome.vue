@@ -5,19 +5,18 @@
             <img src="img/jumbotron-2.jpg" alt="jumbotron" class="img-fluid" id="jumbotron">
 
             <div class="cont-jumbo col-12 col-md-6 ps-1 ps-sm-2 ps-md-5 ps-lg-0">
-                <h1 class="title-jumbo mb-3">
+                <h1 class="title-jumbo text-wrap mb-3">
                     Il tuo specialista a portata di click!
                 </h1>
                 <!-- searchbar -->
                 <div class="cont-searchbar">
-                    <form class="d-flex justify-content-center gap-1 form-inline my-2 my-lg-0 w-75" id="form">
-                        <input v-model="search" class="form-control mr-sm-2 w-100" type="search"
+                    <form class="d-flex justify-content-center form-inputs my-2 my-lg-0 col-12 col-lg-10" id="form">
+                        <input v-model="search" class="form-control bg-white border-0 rounded-pill mr-sm-2 p-2" type="search"
                             placeholder="Scrivi qui.." aria-label="Search" @input="searchInput"
                             @click="displayComponent" @keyup="displayComponent">
                         <router-link :to="{name: 'AdvanceSearch', params: {specialization: mySpecialization.id.toString()} }"
-                            id="search-button"
-                            class="btn btn-warning bg-gradient bg-opacity-25 my-2 my-sm-0 d-flex justify-content-center">
-                            <img id="search-icon" src="img/BDoctors_lens_search.svg" alt="lens-search">
+                            id="search-button">
+                            <img class="search-icon" src="img/BDoctors_lens_search.svg" alt="lens-search">
                         </router-link>
                     </form>
                     <div class="collapse position-absolute d-flex my-collapse" v-if="display"
@@ -122,7 +121,6 @@
 
 <script>
 import CardDoctor from '../components/CardDoctor.vue'
-
 export default {
     name: 'Home',
     data() {
@@ -201,6 +199,17 @@ export default {
         h1 {
             font-size: 2.7em;
         }
+
+        .form-inputs {
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 9px;
+                right: 105px;
+                opacity: 50%;
+            }
+        }
     }
 }
 
@@ -247,7 +256,7 @@ export default {
     width: 100px;
 }
 
-#search-icon {
+.search-icon {
     max-width: 20px;
 }
 

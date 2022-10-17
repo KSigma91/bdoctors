@@ -16,7 +16,7 @@
     <style>
         html,
         body {
-            background-color: #fff;
+            /* background-color: #fff; */
             color: #636b6f;
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
@@ -49,15 +49,13 @@
         }
 
         .navbar {
-            display: flex;
-            justify-content: space-between;
             padding: 10px;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="d-flex justify-content-between navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <a class="navbar-brand mx-3" href="{{ url('/') }}">
             {{-- {{ config('app.name', 'Laravel') }} --}}
             {{-- logo main --}}
@@ -120,7 +118,7 @@
     <div id="root"></div>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-secondary text-light">
+    <footer class="text-center text-lg-start bg-secondary bg-gradient text-light">
         {{-- upper footer  --}}
         <section class="pt-3">
             <div class="container text-center text-md-start mt-5">
@@ -185,7 +183,7 @@
             </div>
         </section>
         <!-- bottom footer -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        <div class="text-center bg-gradient p-4 shadow-lg" style="background-color: rgba(0, 0, 0, 0.05);">
             <small>© 2022 Copyright: BDoctors Tutti i diritti riservati</small>
         </div>
     </footer>

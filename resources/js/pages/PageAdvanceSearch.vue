@@ -1,24 +1,25 @@
 <template>
-    <div class="min-vh-100">
+    <div class="bg-search min-vh-100">
         <div class="container my-5">
-            <div class="d-flex flex-column justify-content-center">
-                <div class="col-12 mb-4">
-                    <div class="card w-100 m-auto border-0 mb-3 shadow" style="border-color: #007fbd">
-                        <div class="card-header bg-gradient border-0 text-light" style="background: #007fbd; border-color: #007fbd">
-                            <h5 class="m-auto">Filtra per:</h5>
-                        </div>
-                        <!-- searchbar -->
-                        <ul class="list-group list-group-flush">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="col-12 col-lg-10 mb-4">
+                    <div class="dropdown mb-4 text-end border-0">
+                        <button class="filter-main-btn py-2 px-3 mb-4 rounded-2 border-0 text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-arrow-down-wide-short me-1"></i>
+                            Filtra
+                        </button>
+                        <ul class="dropdown-menu p-3 border-0 shadow col-12 col-sm-12 col-md-9 col-lg-6" aria-labelledby="dropdownMenuButton1">
                             <!-- Specialization -->
-                            <li class="list-group-item">
-                                <strong>Specializzazioni:</strong><br>
-                                <form class="d-flex form-inline py-2 my-lg-0">
-                                    <input v-model="specializationSelect.name" class="form-control mr-sm-2 w-50 me-2 rounded-pill" type="search_spec"
+                            <li class="dropdown-item">
+                                <strong class="fst-italic" style="color: #007fbd; font-weight: 500">Specializzazioni:</strong><br>
+                                <form class="form-inline d-flex position-relative py-2 my-lg-0">
+                                    <input v-model="specializationSelect.name" class="form-control mr-sm-2 me-2 rounded-pill col-5" type="search_spec"
                                         placeholder="Scrivi qui.." aria-label="Search_spec" @input="searchInput"
                                         @click="displayComponent" @keyup="displayComponent">
-                                    <button class="filter-btn btn btn-outline-primary my-2 m my-sm-0 rounded-pill" type="button" @click="searchDoctor(1)">Filtra</button>
+                                    <button class="btn my-2" type="button" @click="searchDoctor(1)">
+                                        <img id="filter-spec-btn" src="../../../public/img/BDoctors_lens_search.svg" alt="lens-search">
+                                    </button>
                                 </form>
-
                                 <div class="collapse position-absolute d-flex my-collapse" v-if="display"
                                     @mouseleave="handleFocusOut">
                                     <ul class="card overflow-auto my-overflow">
@@ -30,28 +31,29 @@
                                 </div>
                             </li>
                             <!-- City -->
-                            <li class="list-group-item"><strong>Città:</strong><br>
-                                <form class="d-flex form-inline py-2 my-lg-0">
+                            <li class="dropdown-item">
+                                <strong class="fst-italic" style="color: #007fbd; font-weight: 500">Città:</strong><br>
+                                <form class="form-inline position-relative d-flex py-2 my-lg-0">
                                     <input v-model="city" @keyup.enter="searchDoctor" @input="searchInputCity"
-                                        class="form-control mr-sm-2 rounded-pill w-50 me-2" type="search_city"
+                                        class="form-control mr-sm-2 rounded-pill me-2 col-5" type="search_city"
                                         placeholder="Scrivi qui.." aria-label="Search_city" @click="displayComponentCity" @keyup="displayComponentCity">
-                                    <button class="filter-btn btn btn-outline-primary bg-gradient my-2 my-sm-0 rounded-pill"
-                                        type="button" @click="searchDoctor(1)">Filtra</button>
+                                    <button class="btn my-2" type="button" @click="searchDoctor(1)">
+                                        <img id="filter-city-btn" src="../../../public/img/BDoctors_lens_search.svg" alt="lens-search">
+                                    </button>
                                 </form>
-
                                 <div class="collapse position-absolute d-flex my-collapse" v-if="displayCity"
                                 @mouseleave="handleFocusOutCity">
-                                <ul class="card overflow-auto my-overflow">
-                                    <li v-for="cityLi, index in citys" :key="index"
-                                        @click="selectCity(cityLi.city)">
-                                        {{ cityLi.city }}
-                                    </li>
-                                </ul>
-                            </div>
+                                    <ul class="card overflow-auto my-overflow">
+                                        <li v-for="cityLi, index in citys" :key="index"
+                                            @click="selectCity(cityLi.city)">
+                                            {{ cityLi.city }}
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <!-- Vote -->
-                            <li class="list-group-item">
-                                <strong>Media Voto:</strong>
+                            <li class="dropdown-item my-3">
+                                <strong class="fst-italic" style="color: #007fbd; font-weight: 500">Media Voto:</strong>
                                 <span v-for="item in 5" :key="item" class="mx-1">
                                     <input class="form-check-input" type="radio" name="vote" id="flexRadioDefault1"
                                         :checked="vote === item" @click="changeVote(item)">
@@ -61,8 +63,8 @@
                                 </span>
                             </li>
                             <!-- Review -->
-                            <li class="list-group-item">
-                                <strong>Numero Recensioni:</strong>
+                            <li class="dropdown-item my-3">
+                                <strong class="fst-italic" style="color: #007fbd; font-weight: 500">Numero Recensioni:</strong>
                                 <span v-for="item in 4" :key="item" class="mx-1">
                                     <input class="form-check-input" type="radio" name="review" id="flexRadioDefault1"
                                         :checked="review === item" @click="changeReview(item)">
@@ -73,38 +75,39 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div v-if="doctors_sponsorship !== ''">
-                    <h2>Scelti da noi:</h2>
-                    <div class="d-flex flex-wrap my-4">
-                        <CardDoctor v-for="(doctor, index) in doctors_sponsorship" :key="index" :doctor="doctor" class="m-2"/>
+                    <!-- schede medici -->
+                    <div class="mb-5" v-if="doctors_sponsorship !== ''">
+                        <h2 class="ms-4">Scelti da noi:</h2>
+                        <div class="d-flex flex-wrap flex-center my-4">
+                            <CardDoctor v-for="(doctor, index) in doctors_sponsorship" :key="index" :doctor="doctor" class="m-2"/>
+                        </div>
                     </div>
-                </div>
-                <div v-if="doctors !== ''">
-                    <h2>Tutti i medici:</h2>
-                    <div class="d-flex flex-wrap my-4">
-                        <CardDoctor v-for="(doctor, index) in doctors" :key="index" :doctor="doctor" class="m-2"/>
+                    <div class="mb-5" v-if="doctors !== ''">
+                        <h2 class="ms-4">Tutti i medici:</h2>
+                        <div class="d-flex flex-wrap flex-center my-4">
+                            <CardDoctor v-for="(doctor, index) in doctors" :key="index" :doctor="doctor" class="m-2"/>
+                        </div>
                     </div>
+                    <nav aria-label="Page navigation" class="mt-3">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link input-nav" href="#" aria-label="Previous" @click="searchDoctor(--currentPage)">
+                                    <span aria-hidden=" true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link input-nav" href="#" @click="searchDoctor(currentPage)">
+                                    {{ currentPage }}
+                                </a>
+                            </li>
+                            <li class=" page-item">
+                                <a class="page-link input-nav" href="#" aria-label="Next" @click="searchDoctor(++currentPage)">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav aria-label="Page navigation" class="mt-3">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link input-nav" href="#" aria-label="Previous" @click="searchDoctor(--currentPage)">
-                                <span aria-hidden=" true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link input-nav" href="#" @click="searchDoctor(currentPage)">
-                                {{ currentPage }}
-                            </a>
-                        </li>
-                        <li class=" page-item">
-                            <a class="page-link input-nav" href="#" aria-label="Next" @click="searchDoctor(++currentPage)">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
@@ -252,13 +255,29 @@ export default {
 <style lang="scss" scoped>
 @import "../../sass/bdoctor-palette.scss";
 
-.filter-btn {
-    border-color: #007fbd;
-    color: #007fbd;
+.dropdown-item {
+    background-color: rgba($color: #000000, $alpha: 0);
+}
 
-    &:hover {
-        background: #007fbd;
-    }
+.filter-main-btn {
+    background: #23A3B3;
+    box-shadow: 0 0 0px #23A3B3 inset, 0 4px 8px rgba($color: #23A3B3, $alpha: .4);
+}
+
+#filter-spec-btn {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+    max-width: 20px;
+    opacity: 50%;
+}
+
+#filter-city-btn {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+    max-width: 20px;
+    opacity: 50%;
 }
 
 .form-check {

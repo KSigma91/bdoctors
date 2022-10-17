@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10 col-lg-10">
-            <div class="card" style="border-color: #00334e">
-                <div class="card-header bg-gradient text-light" style="background: #00334e; border-color: #00334e">{{ __('Sponsorizzazioni') }}</div>
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-gradient text-light" style="background: #00334e">{{ __('Sponsorizzazioni') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))

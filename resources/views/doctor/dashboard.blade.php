@@ -2,7 +2,7 @@
 
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <div class="container">
+    <div class="container" style="">
         <div class="row justify-content-center text-center vh-100">
             <div class="col-sm-12 col-md-10 col-lg-7">
                 <div class="card border-0 shadow-sm">
