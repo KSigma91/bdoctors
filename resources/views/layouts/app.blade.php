@@ -16,8 +16,8 @@
     <link href="{{ asset('css/back.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white d-flex justify-content-between">
+    <div class="min-vh-100" id="app" style="background: linear-gradient(340deg, #007fbd, #dbebfa)">
+        <nav class="navbar navbar-expand-md d-flex justify-content-between">
             <a class="navbar-brand mx-3" href="{{ url('/') }}">
                 {{-- {{ config('app.name', 'Laravel') }} --}}
                 {{-- logo main --}}

@@ -2,7 +2,7 @@
     <div class="bg-show min-vh-100 position-relative">
         <div class="container position-absolute top-50 start-50 translate-middle mt-5">
             <div class="d-flex justify-content-start flex-wrap mb-5">
-                <div class="card col-12 col-sm-12 col-md-12 col-lg-10 d-flex flex-column justify-content-center m-auto border-0 shadow">
+                <div class="card col-12 col-sm-12 col-md-12 col-lg-10 d-flex flex-column justify-content-center m-auto border-0 shadow" style="border-radius: 15px">
                     <!-- foto profilo -->
                     <div class="mb-0 mt-2 mb-md-0 mb-lg-4">
                         <ul class="card-header d-flex flex-wrap justify-content-between bg-white border-0 py-4 px-3">

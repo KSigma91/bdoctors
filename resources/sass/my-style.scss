@@ -1,10 +1,19 @@
 .left-menu {
     width: 200px;
     min-height: 100vh;
-    background: linear-gradient(rgba(17, 124, 177, .3), rgba(17, 124, 177, 0));
+    background-image: url('/img/bg-backoffice.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border:none;
 
-    i {
-        color: #2a2d45;
+    .left-menu-color {
+        background-color: rgba($color:#004d73, $alpha: .5);
+        height: 100%;
+
+        i {
+            color: #fff;
+        }
     }
 }
 
@@ -13,8 +22,8 @@
 }
 
 .side-nav-li:hover {
-    box-shadow: 0 0 0px #004d73 inset, 0 4px 4px rgba($color: #004d73, $alpha: .4);
-    border-radius: 0.375rem;
+    background: rgba($color: #8ce6ff, $alpha: .2);
+    border-radius: 0.2rem;
     transition: all .2s ease-in;
 }
 
@@ -55,8 +64,12 @@
         gap: 10px;
         padding: 2px;
 
-        i {
-            margin: 4px;
+        .left-menu-color {
+            width: 60px;
+
+            i {
+                margin: 4px;
+            }
         }
     }
 

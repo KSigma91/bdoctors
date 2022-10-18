@@ -4,13 +4,13 @@
         <div class="container-jumbo">
             <img src="img/jumbotron-2.jpg" alt="jumbotron" class="img-fluid" id="jumbotron">
 
-            <div class="cont-jumbo col-12 col-md-6 ps-1 ps-sm-2 ps-md-5 ps-lg-0">
+            <div class="cont-jumbo col-12 col-md-6 col-lg-5 ps-1 ps-sm-2 ps-md-5 ps-lg-0">
                 <h1 class="title-jumbo text-wrap mb-3">
                     Il tuo specialista a portata di click!
                 </h1>
                 <!-- searchbar -->
                 <div class="cont-searchbar">
-                    <form class="d-flex justify-content-center form-inputs my-2 my-lg-0 col-12 col-lg-10" id="form">
+                    <form class="d-flex justify-content-center form-inputs my-2 my-lg-0" id="form">
                         <input v-model="search" class="form-control bg-white border-0 rounded-pill mr-sm-2 p-2" type="search"
                             placeholder="Scrivi qui.." aria-label="Search" @input="searchInput"
                             @click="displayComponent" @keyup="displayComponent">
@@ -191,10 +191,10 @@ export default {
 
     .cont-jumbo {
         position: absolute;
-        top: 45%;
-        left: 53%;
-        z-index: 500;
+        top: 43%;
+        left: 54%;
         transform: translate(-50%, -50%);
+        z-index: 500;
 
         h1 {
             font-size: 2.7em;

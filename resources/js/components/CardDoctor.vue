@@ -33,9 +33,9 @@
             </div>
         </div>
     </div> -->
-    <div class="card border-0 shadow mb-3" style="max-width: 500px;">
+    <div class="card border-0 shadow mb-3" style="max-width: 500px">
         <div class="row g-0">
-            <div class="card-header d-flex justify-content-between text-light">
+            <div class="card-header d-flex justify-content-between border-0 rounded-top text-light">
                 <div class="my-card-name">
                     <big>Dr.</big>
                     <big class="card-title"> {{ doctor.name }} </big>
@@ -46,11 +46,10 @@
                     <big>{{ doctor.city }}</big>
                 </div>
             </div>
-            <div class="col-md-4 flex-start p-4">
+            <div class="d-flex justify-content-center mt-4 col-md-4">
                 <div class="my-card-image">
                     <img class="my-card-img" :src="doctor.photo" :alt="doctor.name">
                 </div>
-
             </div>
             <div class="col-md-8">
                 <div class="card-body">

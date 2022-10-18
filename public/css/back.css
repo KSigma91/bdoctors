@@ -11890,10 +11890,18 @@ textarea.form-control-lg {
 .left-menu {
   width: 200px;
   min-height: 100vh;
-  background: linear-gradient(rgba(17, 124, 177, 0.3), rgba(17, 124, 177, 0));
+  background-image: url("/img/bg-backoffice.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
 }
-.left-menu i {
-  color: #2a2d45;
+.left-menu .left-menu-color {
+  background-color: rgba(0, 77, 115, 0.5);
+  height: 100%;
+}
+.left-menu .left-menu-color i {
+  color: #fff;
 }
 
 .right-content {
@@ -11901,8 +11909,8 @@ textarea.form-control-lg {
 }
 
 .side-nav-li:hover {
-  box-shadow: 0 0 0px #004d73 inset, 0 4px 4px rgba(0, 77, 115, 0.4);
-  border-radius: 0.375rem;
+  background: rgba(140, 230, 255, 0.2);
+  border-radius: 0.2rem;
   transition: all 0.2s ease-in;
 }
 
@@ -11943,7 +11951,10 @@ textarea.form-control-lg {
     gap: 10px;
     padding: 2px;
   }
-  .left-menu i {
+  .left-menu .left-menu-color {
+    width: 60px;
+  }
+  .left-menu .left-menu-color i {
     margin: 4px;
   }
 
