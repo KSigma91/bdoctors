@@ -28,7 +28,7 @@
                         {{-- logo responsive --}}
                         <img class="logo d-flex d-sm-none d-lg-none" src="{{ asset('img/BDoctors_logo_2_resp.svg') }}" alt="logo-resp" style="width: 200px; padding: 12px">
                     </a>
-                    <button class="btn d-none d-md-block d-lg-block py-3 border-0 border-top border-secondary rounded-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="font-weight: 500">
+                    <button class="btn d-none d-md-block d-lg-block py-3 border-0 border-top border-secondary rounded-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="width: 93%; font-weight: 500">
                         Dr. {{ Auth::user()->name }} {{ Auth::user()->lastname }}
                         <i class="fas fa-chevron-down align-middle ms-1" style="font-size: .6rem"></i>
                     </button>
