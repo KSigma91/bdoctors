@@ -20,6 +20,7 @@
     <div id="app" style="background: #F5F5F5">
         <main class="d-flex">
             <section class="left-menu d-flex justify-content-center">
+                {{-- menu desktop --}}
                 <div class="left-menu-color d-flex flex-column flex-shrink-0 align-items-center">
                     <a class="navbar-brand d-flex justify-content-center" href="{{ url('/') }}">
                         {{-- logo main --}}
@@ -27,8 +28,7 @@
                         {{-- logo responsive --}}
                         <img class="logo d-flex d-sm-none d-lg-none" src="{{ asset('img/BDoctors_logo_2_resp.svg') }}" alt="logo-resp" style="width: 200px; padding: 12px">
                     </a>
-                    {{-- <hr class="w-100 m-0 text-secondary"> --}}
-                    <button class="btn d-none d-md-block d-lg-block py-3 border-0 border-top border-secondary rounded-0 fw-bold text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="btn d-none d-md-block d-lg-block py-3 border-0 border-top border-secondary rounded-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="font-weight: 500">
                         Dr. {{ Auth::user()->name }} {{ Auth::user()->lastname }}
                         <i class="fas fa-chevron-down align-middle ms-1" style="font-size: .6rem"></i>
                     </button>
@@ -102,6 +102,7 @@
                 </div>
             </section>
             <section class="right-content my-4">
+                {{-- menu mobile --}}
                 <div class="d-flex justify-content-end">
                     <button class="dropdown-toggle d-md-none d-lg-none btn btn-outline-secondary rounded-pill mb-4 me-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Dr. {{ Auth::user()->name }} {{ Auth::user()->lastname }}

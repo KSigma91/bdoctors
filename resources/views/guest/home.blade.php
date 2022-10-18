@@ -23,6 +23,14 @@
             margin: 0;
         }
 
+        .navbar-nav a:hover {
+            color: #23A3B3;
+            box-shadow: inset 0 -4px 0 #23A3B3;
+            transition: all .1s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+        }
+
         .flex-center {
             align-items: center;
             display: flex;
@@ -88,13 +96,13 @@
                     @endif
                 </li>
                 <li class="links nav-item my-2 my-md-0">
-                    <a class="nav-link fw-normal" href="{{ url('/') }}">HOME</a>
+                    <a class="nav-link fw-normal py-3" href="{{ url('/') }}">HOME</a>
                 </li>
                 <li class="links nav-item my-2 my-md-0">
-                    <a class="nav-link fw-normal" href="{{ url('/search/1') }}">RICERCA AVANZATA</a>
+                    <a class="nav-link fw-normal py-3" href="{{ url('/search/1') }}">RICERCA AVANZATA</a>
                 </li>
                 <li class="links nav-item my-2 my-md-0">
-                    <a class="nav-link fw-normal" href="{{ url('/pricing') }}">PREZZI</a>
+                    <a class="nav-link fw-normal py-3" href="{{ url('/pricing') }}">PREZZI</a>
                 </li>
             </ul>
         </div>

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10 col-lg-10">
             <div class="card border-0 shadow-sm">
-                <div class="card-header bg-primary bg-gradient bg-opacity-50 border-0 display-4 fs-6"><big>{{ __('Reimposta Password') }}</big></div>
+                <div class="card-header bg-light border-0 display-4 fs-6"><big>{{ __('Reimposta Password') }}</big></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -33,7 +33,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary bg-gradient text-light rounded-pill border-0">
+                                <button type="submit" class="btn bg-gradient text-light rounded-pill border-0" style="background: #23A3B3; font-weight: 500">
                                     {{ __('Continua') }}
                                 </button>
                             </div>

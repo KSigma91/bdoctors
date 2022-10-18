@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-sm-11 col-md-10 col-lg-10">
                 <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-primary bg-gradient bg-opacity-50 border-0 display-4 fs-6">
+                    <div class="card-header bg-light border-0 display-4 fs-6">
                         <big>{{ __('Registrazione') }}</big>
                     </div>
 
@@ -168,7 +168,7 @@
                             <div class="form-group row mb-0">
                                 <div class="d-flex justify-content-end col-md-12 mt-4">
                                     <button type="submit" value="Submit"
-                                        class="btn btn-primary bg-gradient rounded-pill border-0 text-light">
+                                        class="btn bg-gradient rounded-pill border-0 text-light" style="background: #23A3B3; font-weight: 500">
                                         {{ __('Completa registrazione') }}
                                     </button>
                                 </div>

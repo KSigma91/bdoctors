@@ -16,12 +16,12 @@
     <link href="{{ asset('css/back.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="min-vh-100" id="app" style="background: linear-gradient(340deg, #007fbd, #dbebfa)">
+    <div class="min-vh-100" id="app" style="background: linear-gradient(150deg, #007fbd, #dbebfa)">
         <nav class="navbar navbar-expand-md d-flex justify-content-between">
             <a class="navbar-brand mx-3" href="{{ url('/') }}">
                 {{-- {{ config('app.name', 'Laravel') }} --}}
                 {{-- logo main --}}
-                <img class="logo d-none d-sm-flex d-lg-flex" src="{{ asset('img/BDoctors_logo_2.svg') }}" alt="logo">
+                <img class="logo d-none d-sm-flex d-lg-flex" src="{{ asset('img/BDoctors_logo_back.svg') }}" alt="logo">
                 {{-- logo responsive --}}
                 <img class="logo d-flex d-sm-none d-lg-none" src="{{ asset('img/BDoctors_logo_2_resp.svg') }}" alt="logo-resp">
             </a>
